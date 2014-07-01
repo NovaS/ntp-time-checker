@@ -28,7 +28,7 @@
 						<addMavenDescriptor>false</addMavenDescriptor>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<classpathPrefix>lib/</classpathPrefix>
+							<classpathPrefix>lib${file.separator}</classpathPrefix>
 							<mainClass>${app.main.class}</mainClass>
 						</manifest>
 					</archive>
@@ -46,7 +46,7 @@
 							<goal>copy-dependencies</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${project.build.directory}/lib</outputDirectory>
+							<outputDirectory>${project.build.directory}${file.separator}lib</outputDirectory>
 							<overWriteReleases>false</overWriteReleases>
 							<overWriteSnapshots>false</overWriteSnapshots>
 							<overWriteIfNewer>true</overWriteIfNewer>
